@@ -13,7 +13,7 @@ pipeline {
 		stage ("Git Secrets"){
 			steps{
 				sh "rm trufflehog || true"
-				sh "docker run gesellix/trufflehog --json https://github.com/guarancy/djangorestapi-pipeline > trufflehog"
+				sh "docker run gesellix/trufflehog --json https://github.com/Research-Associate-Internship/dvws > trufflehog"
 				sh "cat trufflehog"
 			}
 		}
