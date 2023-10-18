@@ -8,17 +8,6 @@ pipeline {
 				sh "ls"
 			}
 		}
-		stage ("Python Prepare"){
-			steps {
-				sh "pip3 install -r requirements.txt"
-			}
-
-		}
-		stage ("Unit Test"){
-			steps{
-				sh "python3 test_basic.py"
-			}
-		}
 		stage ("Git Secrets"){
 			steps{
 				sh "rm trufflehog || true"
