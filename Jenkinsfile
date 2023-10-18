@@ -1,6 +1,6 @@
 pipeline {
 	agent {
-		label 'viyy-node'
+		label 'workernode1'
 	}
 	stages {
 		stage ("Git checkout"){
