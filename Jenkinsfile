@@ -1,6 +1,6 @@
 pipeline {
 	agent {
-		label 'vi-node'
+		label 'vi-ubuntu'
 	}
 	stages {
 		stage ("Git checkout"){
