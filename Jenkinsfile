@@ -17,6 +17,9 @@ pipeline {
 				sh "cat trufflehog"
 			}
 		}
+		stage('Snyk Scan') {
+			snykSecurity organisation: 'suryaviyyapu', snykInstallation: 'SnykJ', snykTokenId: 'Snyk'
+		}
 		stage ("Python Bandit Security Scan"){
 			steps{
 				sh "docker run --rm --volume \$(pwd) secfigo/bandit:latest"
