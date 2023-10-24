@@ -18,7 +18,9 @@ pipeline {
 			}
 		}
 		stage('Snyk Scan') {
-			snykSecurity organisation: 'suryaviyyapu', snykInstallation: 'SnykJ', snykTokenId: 'Snyk'
+			steps{
+				snykSecurity organisation: 'suryaviyyapu', snykInstallation: 'SnykJ', snykTokenId: 'Snyk'
+			}
 		}
 		stage ("Python Bandit Security Scan"){
 			steps{
